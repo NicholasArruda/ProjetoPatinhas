@@ -19,15 +19,10 @@ O **Patinhas** é um projeto desenvolvido por alunos da Universidade UNIFG com o
 - **Frontend**: HTML, CSS, JavaScript
 - **Hospedagem**: Vercel
 
-## Como Executar o Projeto
+## Contato
 
-### Pré-requisitos
+Para mais informações, entre em contato com a equipe do projeto:
 
-- Node.js
-- MongoDB
-
-### Passo a Passo
-
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/patinhas.git
+- **Nome do Responsável**: [Seu Nome]
+- **Email**: seuemail@exemplo.com
+- **LinkedIn**: [Seu LinkedIn](link-para-seu-linkedin)
