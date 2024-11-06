@@ -8,11 +8,9 @@ O **Patinhas** é um projeto desenvolvido por alunos da Universidade UNIFG com o
 
 ## Funcionalidades
 
-- **Cadastro de Animais**: ONGs podem cadastrar animais disponíveis para adoção, incluindo fotos, descrições e informações sobre a saúde e comportamento.
-- **Busca de Animais**: Usuários podem buscar animais disponíveis por tipo, raça, idade e localização.
 - **Perfil do Usuário**: Adotantes podem criar perfis, onde podem visualizar animais que estão interessados e acompanhar o status da adoção.
-- **Sistema de Mensagens**: Comunicação direta entre adotantes e ONGs para esclarecer dúvidas sobre os animais.
-- **Blog**: Artigos e dicas sobre cuidados com animais, adoção responsável e histórias de sucesso.
+- **Busca de Animais**: Usuários podem buscar animais disponíveis por tipo, raça, idade e localização.
+- **Solicitar Adoção**: Usuários podem solicitar adoção após a escolha de seu pet ideal.
 
 ## Tecnologias Utilizadas
 
