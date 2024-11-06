@@ -23,6 +23,6 @@ O **Patinhas** é um projeto desenvolvido por alunos da Universidade UNIFG com o
 
 Para mais informações, entre em contato com a equipe do projeto:
 
-- **Nome do Responsável**: [Nicholas Arruda]
+- **Nome do Responsável**: Nicholas Arruda
 - **Email**: nicholasarruda99@gmail.com
 - **LinkedIn**: [Nicholas Arruda](https://www.linkedin.com/in/dev-nicholas-arruda/)
