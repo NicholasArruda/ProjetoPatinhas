@@ -1,6 +1,6 @@
 # Patinhas - Site de Adoção de Animais
 
-![Logo do Patinhas](link-para-logo.png)
+![Logo do Patinhas](img/Logo.png)
 
 ## Descrição do Projeto
 
