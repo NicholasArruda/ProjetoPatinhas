@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Patinhas - Cadastro</title>
+    <style>
+        :root {
+            --orange-primary: #fe7518;
+            --orange-secondary: #fe7518;
+            --orange-dark: #e67e22;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--orange-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .register-container {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .register-header h1 {
+          color: var(--orange-primary);
+          font-size: 2rem;
+          margin-top: 15px; /* Aumenta o espaço entre a imagem e o título */
+      }
+
+        .logo {
+            position: relative; /* Para permitir a sobreposição */
+            width: 100px; /* Ajuste o tamanho conforme necessário */
+            height: 100px; /* Ajuste o tamanho conforme necessário */
+            margin: 0 auto; /* Centraliza o logo */
+            overflow: hidden; /* Para esconder as partes que saem do contêiner */
+        }
+
+        .pet {
+            position: absolute; /* Para sobreposição */
+            width: 100%; /* Ocupa toda a largura do contêiner */
+            height: 100%; /* Ocupa toda a altura do contêiner */
+            background-size: contain; /* Mantém a proporção da imagem */
+            background-repeat: no-repeat; /* Impede a repetição da imagem */
+            opacity: 0; /* Começa invisível */
+            animation: fade 9s infinite; /* 9s para alternar entre 3 pets */
+        }
+
+        .pet:nth-child(1) {
+            background-image: url('img/cachorro_marrom.png'); /* Imagem do primeiro pet */
+            animation-delay: 0s; /* Primeira imagem aparece primeiro */
+        }
+
+        .pet:nth-child(2) {
+            background-image: url('img/cachorro_laranja.png'); /* Imagem do segundo pet */
+            animation-delay: 3s; /* Segunda imagem aparece depois de 3s */
+        }
+
+        .pet:nth-child(3) {
+            background-image: url('img/cachorro_cinza.png'); /* Imagem do terceiro pet */
+            animation-delay: 6s; /* Terceira imagem aparece depois de 6s */
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0; }
+            25%, 75% { opacity: 1; }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--orange-primary);
+        }
+
+        .register-button {
+            background-color: var(--orange-primary);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .register-button:hover {
+            background-color: var(--orange-dark);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .login-link a {
+            color: var(--orange-primary);
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: black;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="PatinhasIndex.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        Voltar para início
+    </a>
+
+    <div class="register-container">
+        <div class="register-header">
+            <div class="logo">
+                <div class="pet"></div>
+                <div class="pet"></div>
+                <div class="pet"></div>
+            </div>
+            <h1>Patinhas</h1>
+            <p>Crie sua conta!</p>
+        </div>
+
+        <form id="registerForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">Nome</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+            <button type="submit" class="register-button">Cadastrar</button>
+        </form>
+
+        <div class="login-link">
+            <p>Já tem uma conta? <a href="PatinhasLogin.html">Fazer login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                password: password
+            };
+            
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'PatinhasLogin.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<html><head><base href="PatinhasIndex.html" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patinhas - Adote um Amigo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #fe7518;
+  --secondary: #FF9666;
+  --light: #FFF0EB;
+  --dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.navbar {
+  background: var(--primary);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--light);
+}
+
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: var(--primary);
+}
+
+.paw-icon {
+  fill: white;
+  width: 32px;
+  height: 32px;
+}
+
+.filters {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-item label {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+select, input {
+  padding: 8px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+select:focus, input:focus {
+  border-color: var(--primary);
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.pet-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pet-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pet-info {
+  padding: 15px;
+}
+
+.pet-name {
+  font-size: 1.2em;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.pet-details {
+  color: var(--dark);
+  font-size: 0.9em;
+}
+
+.adopt-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.adopt-button:hover {
+  background: var(--secondary);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.tag {
+  background: var(--light);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="PatinhasIndex.html" class="logo">
+    <svg class="paw-icon" viewBox="0 0 24 24" width="32" height="32">
+      <path fill="white" d="M12,8L10.67,8.09C9.81,7.07 7.4,4.5 5,4.5C5,4.5 3.03,7.46 4.96,11.41C4.41,12.24 4.07,12.67 4,13.66L2.07,13.95L2.28,14.93L4.04,14.67L4.18,15.38L2.61,16.32L3.08,17.21L4.53,16.32C5.68,18.76 8.59,20 12,20C15.41,20 18.32,18.76 19.47,16.32L20.92,17.21L21.39,16.32L19.82,15.38L19.96,14.67L21.72,14.93L21.93,13.95L20,13.66C19.93,12.67 19.59,12.24 19.04,11.41C20.97,7.46 19,4.5 19,4.5C16.6,4.5 14.19,7.07 13.33,8.09L12,8Z"/>
+    </svg>
+    Patinhas
+  </a>
+  <div class="nav-links">
+    <a href="PatinhasIndex.html" class="nav-link">Início</a>
+    <a href="PatinhasPesquisa.html" class="nav-link">Adotar</a>
+    <a href="PatinhasCadastro.html" class="nav-link">Cadastre-se</a>
+    <a href="PatinhasLogin.html" class="nav-link">Login</a>
+  </div>
+</nav>
+
+<section class="filters">
+  <div class="filter-grid">
+    <div class="filter-item">
+      <label>Espécie</label>
+      <select id="species">
+        <option value="">Todas</option>
+        <option value="dog">Cachorro</option>
+        <option value="cat">Gato</option>
+        <option value="bird">Pássaro</option>
+        <option value="rabbit">Coelho</option>
+      </select>
+    </div>
+    
+    <div class="filter-item">
+      <label>Idade</label>
+      <select id="age">
+        <option value="">Todas</option>
+        <option value="baby">Filhote (0-1 ano)</option>
+        <option value="young">Jovem (1-3 anos)</option>
+        <option value="adult">Adulto (3-8 anos)</option>
+        <option value="senior">Idoso (8+ anos)</option>
+      </select>
+    </div>
+    
+    <div class="filter-item">
+      <label>Porte</label>
+      <select id="size">
+        <option value="">Todos</option>
+        <option value="small">Pequeno</option>
+        <option value="medium">Médio</option>
+        <option value="large">Grande</option>
+      </select>
+    </div>
+    
+    <div class="filter-item">
+      <label>Sexo</label>
+      <select id="gender">
+        <option value="">Todos</option>
+        <option value="male">Macho</option>
+        <option value="female">Fêmea</option>
+      </select>
+    </div>
+    
+    <div class="filter-item">
+      <label>Temperamento</label>
+      <select id="temperament">
+        <option value="">Todos</option>
+        <option value="calm">Calmo</option>
+        <option value="active">Ativo</option>
+        <option value="friendly">Sociável</option>
+        <option value="shy">Tímido</option>
+      </select>
+    </div>
+    
+    <div class="filter-item">
+      <label>Buscar por nome</label>
+      <input type="text" id="search" placeholder="Digite o nome...">
+    </div>
+  </div>
+</section>
+
+<div class="pet-grid" id="petGrid">
+  <!-- Pets serão inseridos aqui via JavaScript -->
+</div>
+
+<script>
+const pets = [
+  {
+    id: 1,
+    name: "Thor",
+    species: "dog",
+    breed: "Labrador",
+    age: "young",
+    size: "large",
+    gender: "male",
+    temperament: ["friendly", "active"],
+    image: "https://images.unsplash.com/photo-1543466835-00a7907e9de1",
+    description: "Thor é um fiel amigo cheio de energia!"
+  },
+  {
+    id: 2,
+    name: "Luna",
+    species: "cat",
+    breed: "Siamês",
+    age: "adult",
+    size: "small",
+    gender: "female",
+    temperament: ["calm", "shy"],
+    image: "https://images.unsplash.com/photo-1573865526739-10659fec78a5",
+    description: "Luna é uma gatinha dócil e carinhosa"
+  },
+{
+    id: 3,
+    name: "Max",
+    species: "dog",
+    breed: "Vira-lata",
+    age: "puppy",
+    size: "large",
+    gender: "male",
+    temperament: ["friendly", "playful"],
+    image: "https://images.unsplash.com/photo-1577175889968-f551f5944abd",
+    description: "Max é um filhote energético que adora brincar e fazer novos amigos."
+},
+{
+  id: 4,
+  name: "Bella",
+  species: "cat",
+  breed: "Persa",
+  age: "adult",
+  size: "medium",
+  gender: "female",
+  temperament: ["affectionate", "lazy"],
+  image: "https://images.unsplash.com/photo-1533738363-b7f9aef128ce",
+  description: "Bella é uma gata tranquila que adora passar o dia dormindo ao sol."
+},
+{
+  id: 5,
+  name: "Charlie",
+  species: "dog",
+  breed: "Husky Siberiano",
+  age: "adult",
+  size: "medium",
+  gender: "male",
+  temperament: ["curious", "friendly"],
+  image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb",
+  description: "Charlie é um cão curioso que adora explorar novos lugares."
+},
+{
+  id: 6,
+  name: "Mia",
+  species: "cat",
+  breed: "Bengal",
+  age: "kitten",
+  size: "small",
+  gender: "female",
+  temperament: ["active", "playful"],
+  image: "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8",
+  description: "Mia é uma gatinha brincalhona e cheia de energia que adora correr pela casa."
+},
+{
+  id: 7,
+  name: "Rocky",
+  species: "dog",
+  breed: "Bulldog",
+  age: "adult",
+  size: "medium",
+  gender: "male",
+  temperament: ["calm", "loyal"],
+  image: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e",
+  description: "Rocky é um pet leal que adora passar tempo com sua família."
+},
+{
+  id: 8,
+  name: "Zara",
+  species: "cat",
+  breed: "Ragdoll",
+  age: "adult",
+  size: "large",
+  gender: "female",
+  temperament: ["gentle", "affectionate"],
+  image: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131",
+  description: "Zara é uma gata carinhosa que adora ser acariciada."
+},
+{
+  id: 9,
+  name: "Buddy",
+  species: "dog",
+  breed: "Labrador Retriever",
+  age: "adult",
+  size: "large",
+  gender: "male",
+  temperament: ["friendly", "intelligent"],
+  image: "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8",
+  description: "Buddy é um cão leal e inteligente, perfeito para famílias ativas."
+},
+{
+  id: 10,
+  name: "Nala",
+  species: "cat",
+  breed: "Sphynx",
+  age: "young",
+  size: "small",
+  gender: "female",
+  temperament: ["playful", "affectionate"],
+  image: "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec",
+  description: "Nala é uma gata cheia de energia que adora brincar e receber carinho."
+}
+  // Adicione mais pets aqui
+];
+
+function renderPets(filteredPets = pets) {
+  const grid = document.getElementById('petGrid');
+  grid.innerHTML = '';
+  
+  filteredPets.forEach(pet => {
+    const card = document.createElement('div');
+    card.className = 'pet-card';
+    
+    card.innerHTML = `
+      <img class="pet-image" src="${pet.image}" alt="${pet.name} - ${pet.breed}">
+      <div class="pet-info">
+        <h3 class="pet-name">${pet.name}</h3>
+        <div class="tags">
+          <span class="tag">${pet.species}</span>
+          <span class="tag">${pet.age}</span>
+          <span class="tag">${pet.size}</span>
+        </div>
+        <p class="pet-details">${pet.description}</p>
+        <button class="adopt-button">Quero Adotar</button>
+      </div>
+    `;
+    
+    grid.appendChild(card);
+  });
+}
+
+function filterPets() {
+  const species = document.getElementById('species').value;
+  const age = document.getElementById('age').value;
+  const size = document.getElementById('size').value;
+  const gender = document.getElementById('gender').value;
+  const temperament = document.getElementById('temperament').value;
+  const search = document.getElementById('search').value.toLowerCase();
+  
+  let filtered = pets.filter(pet => {
+    return (!species || pet.species === species) &&
+           (!age || pet.age === age) &&
+           (!size || pet.size === size) &&
+           (!gender || pet.gender === gender) &&
+           (!temperament || pet.temperament.includes(temperament)) &&
+           (!search || pet.name.toLowerCase().includes(search) || 
+            pet.breed.toLowerCase().includes(search) ||
+            pet.description.toLowerCase().includes(search));
+  });
+  
+  renderPets(filtered);
+}
+
+// Adicionar event listeners para todos os filtros
+document.querySelectorAll('select, input').forEach(element => {
+  element.addEventListener('change', filterPets);
+  element.addEventListener('keyup', filterPets);
+});
+
+// Renderizar todos os pets inicialmente
+renderPets();
+
+</script>
+
+<footer class="footer">
+  <p>© 2024 Patinhas - Todos os direitos reservados</p>
+  <div class="social-links">
+    <a href="https://facebook.com/" class="social-link">Facebook</a>
+    <a href="https://instagram.com/" class="social-link">Instagram</a>
+    <a href="https://twitter.com/" class="social-link">Twitter</a>
+  </div>
+</footer>
+
+</body>
+</html>
